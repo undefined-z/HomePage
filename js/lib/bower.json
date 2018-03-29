@@ -1,0 +1,17 @@
+{
+  "name": "z",
+  "homepage": "https://github.com/undefined-z/HomePage",
+  "authors": [
+    "zhaohongyu <zhaohongyu>"
+  ],
+  "description": "z",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
