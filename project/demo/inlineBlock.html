@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内块元素对齐</title>
+</head>
+<style>
+    span {
+        background-color: darkred;
+        color: white;
+    }
+
+    .pull-right {
+        float: right;
+    }
+
+    .span1 {
+        max-width: 120px;
+        display: inline-block;
+        /* vertical-align: top;*/
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: bottom;
+    }
+
+    .span2 {
+        max-width: 120px;
+        display: inline-block;
+        /* vertical-align: top;*/
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+<body>
+<span>
+    <span class="span1">行内块元素1</span>
+    <span class="display-name display-class">行内块元素2</span>
+</span>
+<div style="padding: 20px">
+    <p>inline-block元素设置overflow:hidden属性导致相邻行内元素向下偏移</p>
+    <p>解决方案：该元素添加属性vertical-align: top;</p>
+</div>
+<span>
+    <span class="span2">李工</span>
+    <span class="display-name display-class">待分派</span>
+</span>
+</body>
+</html>

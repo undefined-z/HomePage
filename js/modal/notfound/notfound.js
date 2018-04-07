@@ -5,6 +5,10 @@
  */
 define(["text!../js/modal/notfound/notfound.html"], function (html) {
     return {
-        html: html
+        html: html,
+        htmlName:'notfound',
+        init:function () {
+            
+        }
     }
 });

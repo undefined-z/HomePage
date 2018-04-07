@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+#content{
+height:2000px;
+background-color:red;
+}
+#XY,#XY2,#XY3{
+position:fixed;
+background:yellow;
+}
+#XY{
+left:20px;
+}
+#XY2{
+left:20px;
+top:30px;
+}
+#XY3{
+    left:20px;
+    top:60px;
+}
+</style>
+<script src="../../js/lib/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="XY" ></div>
+<div id="XY2" ></div>
+<div id="XY3" ></div>
+<div id='content'>
+</div>
+<script>
+$(document).ready(function () { 
+	$(document).mousemove(function(e){  
+		$('#XY').html("clientX : " + e.clientX + " | clientY : " + e.clientY);
+        $('#XY2').html("pageX : " + e.pageX + " | pageY : " + e.pageY);
+        $('#XY3').html("screenX : " + e.screenX + " | screenY : " + e.screenY);
+	});
+/*	$(document).mousemove(function(e){
+		$('#XY2').html("pageX : " + e.pageX + " | pageY : " + e.pageY);  
+	});*/
+});
+</script>
+</body>
+</html>

@@ -5,7 +5,15 @@
  */
 define([], function () {
     var Z = {
+        /**
+         * 组件信息
+         */
         info: 'v1.0@zhaohongyu',
+        /**
+         * 继承
+         * @param sub
+         * @param Parent
+         */
         extend: function (sub, Parent) {
             var Temp = function () {
             }
@@ -13,7 +21,42 @@ define([], function () {
             sub.prototype = new Temp();
             sub.prototype.constructor = sub;
         },
-        $mainContainer:$('#mainContainer')
+        /**
+         * 主容器
+         */
+        $mainContainer: $('#mainContainer'),
+        /**
+         * 菜单容器
+         */
+        $mainMenu: $('#mainMenu'),
+        /**
+         * 卸载模块
+         * @param modalName
+         */
+        destroyModal: function (modalName) {
+            if (modalName) {
+                $('[data-modal-name=' + modalName + ']').remove();
+            } else {
+                this.$mainContainer.empty();
+            }
+
+        },
+        initModal: function (hash,param) {
+            this.destroyModal();
+            //var path='modal/'+hash+'/'+hash;
+            var hash = hash;
+            if (!globalConfig.get('modal')[hash] && hash !== '') {
+                hash = 'notfound';
+            } else if (hash === '') {
+                hash = 'indexPage';
+            }
+            require([hash], function (modal) {
+                Z.$mainContainer.html(modal.html);
+                modal.init({urlParam:param});
+            });
+
+
+        }
 
     };
     window.Z = Z;

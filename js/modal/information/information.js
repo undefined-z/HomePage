@@ -1,8 +1,8 @@
-define([],function () {
+define(['text!../js/modal/information/information.html'], function (html) {
     function init() {
-        alert('infomation模块')
     }
-    return{
-        init:init
+    return {
+        init: init,
+        html: html
     }
 });

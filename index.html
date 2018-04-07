@@ -12,39 +12,39 @@
     <meta name="viewport" content="width=800, user-scalable=no">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/demo.css">
+    <script src="js/lib/bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 
 <body>
 <canvas id="canvas" style="position: absolute"></canvas>
-<div class="meny">
+<div class="meny" id="mainMenu">
     <h2>个人主页</h2>
-    <ul>
-        <li><a href="#information">个人信息</a></li>
-        <li><a href="#">技术栈</a></li>
-        <li><a href="#">教育经历</a></li>
-        <li><a href="#">工作经历</a></li>
-        <li><a href="#">小Demo</a></li>
-        <li><a href="#">reveal.js</a></li>
-        <li><a href="#">Sinuous for iOS</a></li>
-        <li><a href="#">DOM Tree</a></li>
-        <li><a href="#">Holobox</a></li>
-        <li><a href="#">404</a></li>
+    <ul id="indexMenu">
+        <li><a href="#indexPage">首页</a></li>
+        <li><a href="#userInfo">个人简历</a></li>
+      <!--  <li><a href="#workInfo">工作经历</a></li>
+        <li><a href="#technology">技术栈</a></li>
+        <li><a href="#education">教育经历</a></li>-->
+        <li><a href="#information">个人相册</a></li>
+        <li>Demo测试↓</li>
+        <li><a href="#demo?chuizhishuiping">垂直水平居中</a></li>
+        <li><a href="#demo?inlineBlock">span相邻元素塌陷</a></li>
+        <li><a href="#demo?getMouse">获取鼠标位置</a></li>
+        <li><a href="#cat">猫</a></li>
+        <li><a href="#notfound">404</a></li>
     </ul>
 </div>
 
 <div class="meny-arrow"></div>
 
 <div class="contents">
-    <div class="main-container" id="mainContainer">
-        <h1>Welcome！</h1>
+    <div class="main-container " id="mainContainer">
 
     </div>
 
 </div>
 
-<!--<script src="js/system/canvas.js"></script>-->
-<script src="js/lib/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="js/system/meny.js"></script>
+<script src="js/system/config.js"></script>
 <script src="js/lib/bower_components/requirejs/require.js" data-main="js/system/requireMain.js"></script>
 </body>
 </html>

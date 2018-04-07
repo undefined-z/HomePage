@@ -17,12 +17,12 @@
 	transform: translate3d(0, 0, 0);
 }
 
-.main {
+.cat-main {
 	-webkit-transition: opacity 0.6s;
 	transition: opacity 0.6s;
 }
 
-.menu.menu--open + .main {
+.menu.menu--open + .cat-main {
 	opacity: 0.3;
 	pointer-events: none;
 }
@@ -170,7 +170,7 @@
 }
 
 @media screen and (max-width: 63em) {
-	.main {
+	.cat-main {
 		padding: 0 2em;
 		-webkit-transition: opacity 0.6s;
 		transition: opacity 0.6s;
@@ -181,7 +181,7 @@
 		transform: translate3d(-170px, 0, 0);
 	}
 
-	.menu.menu--open + .main {
+	.menu.menu--open + .cat-main {
 		opacity: 0.05;
 	}
 }

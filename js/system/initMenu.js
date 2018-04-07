@@ -3,8 +3,9 @@
  * @author: zhaohongyu@ruijie.com.cn
  * @date:   2018/3/29
  */
+define(['meny'],function (Meny) {
     // Create an instance of Meny
-var meny = Meny.create({
+    var meny = Meny.create({
         // The element that will be animated in from off screen
         menuElement: document.querySelector('.meny'),
 
@@ -30,6 +31,21 @@ var meny = Meny.create({
         touch: true
     });
 
+    function init() {
+        // Embed an iframe if a URL is passed in
+        if (Meny.getQuery().u && Meny.getQuery().u.match(/^http/gi)) {
+            var contents = document.querySelector('.contents');
+            contents.style.padding = '0px';
+            contents.innerHTML = '<div class="cover"></div><iframe src="' + Meny.getQuery().u + '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+        }
+        return meny;
+    }
+    return{
+        init:init
+    }
+});
+
+
 // API Methods:
 // meny.open();
 // meny.close();
@@ -39,9 +55,3 @@ var meny = Meny.create({
 // meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
 // meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
 
-// Embed an iframe if a URL is passed in
-if (Meny.getQuery().u && Meny.getQuery().u.match(/^http/gi)) {
-    var contents = document.querySelector('.contents');
-    contents.style.padding = '0px';
-    contents.innerHTML = '<div class="cover"></div><iframe src="' + Meny.getQuery().u + '" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
-}
