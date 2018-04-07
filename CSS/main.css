@@ -1,17 +1,8 @@
-/*body{
-	height: 100%;
-	background:url('../IMG/bg.jpg') no-repeat;
-	background-size: cover;
-}*/
+
 .hint-color {
     color: #ccc;
 }
 
-/*.index-title{*/
-/*background: #000000;*/
-/*display: inline-block;*/
-/*padding: 5px;*/
-/*}*/
 .main-container {
     background: #ccc;
     width: 100%;
