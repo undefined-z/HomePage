@@ -41,7 +41,11 @@ define([], function () {
             }
 
         },
-        initModal: function (hash,param) {
+        setUrl: function (name) {
+            var url = location.origin + location.pathname + location.search + '#' + name;
+            location.href = url;
+        },
+        initModal: function (hash, param) {
             this.destroyModal();
             //var path='modal/'+hash+'/'+hash;
             var hash = hash;
@@ -52,7 +56,7 @@ define([], function () {
             }
             require([hash], function (modal) {
                 Z.$mainContainer.html(modal.html);
-                modal.init({urlParam:param});
+                modal.init({urlParam: param});
             });
 
 

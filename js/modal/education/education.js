@@ -1,8 +1,9 @@
-define([],function () {
-    function init() {
-        alert('教育模块')
+define(['text!../js/modal/education/education.html'],function (html) {
+    function init(param) {
+        alert(param.urlParam.param);
     }
     return{
-        init:init
+        init:init,
+        html:html
     }
 });

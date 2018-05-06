@@ -13,10 +13,12 @@ var globalConfig = (function () {
             util: 'system/util',
             information: 'modal/information/information',
             notfound: 'modal/notfound/notfound',
+            userInfo:'modal/userInfo/userInfo',
             indexPage: 'modal/indexPage/indexPage',
             cat: 'modal/cat/cat',
             meny:'system/meny',
-            initMenu:'system/initMenu'
+            initMenu:'system/initMenu',
+            eduction:'modal/education/education'
         },
         shim: {
          /*   initMenu:{

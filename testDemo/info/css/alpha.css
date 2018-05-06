@@ -4,7 +4,7 @@ Author: Aleksej Vukomanović
 Version: 1.0
 */
 #testimonials ul{margin-bottom: 0;}
-#testimonials {position: relative; background: url(../images/_test_bck.jpg) no-repeat center; background-size: cover;}
+#testimonials {position: relative; background: url(../images/test_bck.jpg) no-repeat center; background-size: cover;}
 #tes-title h2, #wid-title h2{ font-size: 24px; display: inline-block; z-index: 3;position: relative;}
 #wid-title h2{font-size: 18px;} 
 #wid-title h2:after, #wid-title h2:before,
